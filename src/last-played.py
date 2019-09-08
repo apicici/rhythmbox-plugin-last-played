@@ -39,8 +39,8 @@ class LastPlayed(GObject.Object, Peas.Activatable):
         self.shell_player.connect('playing-changed', self.playing_changed)
         self.shell_player.connect('playing-source-changed', self.playing_source_changed)
         self.shell.props.db.connect('load-complete', self.load_complete)
-        self.shell_player.connect('elapsed-changed', self.elapsed_changed)
-
+        
+        
     def do_deactivate(self):
         self.save_rhythm()
 
@@ -77,7 +77,7 @@ class LastPlayed(GObject.Object, Peas.Activatable):
         try:
             entry = self.shell_player.get_playing_entry()
             self.location = entry.get_string(RB.RhythmDBPropType.LOCATION)
-            GObject.idle_add(self.save_rhythm, 0)
+            GObject.idle_add(self.save_rhythm)
         except:
             return
 
@@ -104,5 +104,3 @@ class LastPlayed(GObject.Object, Peas.Activatable):
         if self.location:
             self.settings.set_string(KEY_LOCATION, self.location)
         GObject.idle_add(self.get_source_data)
-
-
