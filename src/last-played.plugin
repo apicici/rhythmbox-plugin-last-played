@@ -2,7 +2,7 @@
 Loader=python3
 Module=last-played
 IAge=1
-Name=Remember the Rhythm
+Name=Last played
 Description=Remembers last playing song + playback time and resumes on next start
 Authors=Owais Lone <hello@owaislone.org>; apicici
 Copyright=Copyright © 2011 Owais Lone, 2019 apicici
