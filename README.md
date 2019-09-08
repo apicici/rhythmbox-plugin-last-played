@@ -22,10 +22,10 @@ Rhythmbox 3.0 or above
 
 ### From Source
 
-####Install
+#### Install
 
     sudo make install
 
-####Remove
+#### Remove
 
      sudo make uninstall
