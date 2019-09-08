@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.rhythmbox.plugins.last-played" path="/org/gnome/rhythmbox/plugins/last-played/">
+    <key type="s" name="last-entry-location">
+      <default>''</default>
+      <summary>Location of the last playing entry</summary>
+      <description>This entry will be automatically played by rhythmbox upon startup.</description>
+    </key>
+    <key type="aas" name="browser-values">
+      <default>[]</default>
+      <summary>Genre/Artist/Album</summary>
+      <description>Remembers the filters in RBLibraryBrowser and sets on start up.</description>
+    </key>
+    <key type="s" name="playlist">
+      <default>''</default>
+      <summary>Last playlist</summary>
+      <description>Name of the last playing playlist if any.</description>
+    </key>
+  </schema>
+</schemalist>
